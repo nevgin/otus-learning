@@ -1,0 +1,25 @@
+[33mcommit 9a75b8e6fda0e0e5e63757ff05f36c8ce1db3cae[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Alexey Nevgin <nevgin@yandex.ru>
+Date:   Thu Oct 18 23:45:34 2018 +0300
+
+    Revert "Capitals added"
+    
+    This reverts commit 4cd7c4c8f91806107f803297ac80971b5ef13fa3.
+
+[33mcommit f028a8ab21900265a196e55f50cc6050413d0791[m
+Author: Alexey Nevgin <nevgin@yandex.ru>
+Date:   Thu Oct 18 23:42:08 2018 +0300
+
+    “Another capital was added
+
+[33mcommit 4cd7c4c8f91806107f803297ac80971b5ef13fa3[m
+Author: Alexey Nevgin <nevgin@yandex.ru>
+Date:   Thu Oct 18 23:38:49 2018 +0300
+
+    Capitals added
+
+[33mcommit 14bae7f23503318fa7c585bad1da3f2022371c4a[m
+Author: Alexey Nevgin <nevgin@yandex.ru>
+Date:   Thu Oct 18 23:37:08 2018 +0300
+
+    My first commit

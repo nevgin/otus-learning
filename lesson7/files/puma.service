@@ -1,0 +1,22 @@
+[Unit]
+Description=Puma server
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/tmp/service.pid
+WorkingDirectory=/opt/reddit/
+
+User=puma
+Group=puma
+
+
+OOMScoreAdjust=-100
+
+ExecStart=/opt/reddit/start.sh
+#ExecStop=/bin/kill $PIDFile
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target 
