@@ -1,0 +1,36 @@
+{
+ "variables": {
+ 	"project_id":null,
+	"source_image":null,
+	"image_description":"Template for reddit app",
+	"disk_type":"pd_standard",
+	"disk_size":"11G",
+	"lan_tags":"puma-server",
+	"zone":"asia-east1-b"
+
+ }, 
+ "builders": [
+	  {
+	  "type": "googlecompute",
+          "project_id": "{{user `project_id`}}",
+	  "image_name": "reddit-base-{{timestamp}}",
+	  "image_description":"{{user `image_description`}}",
+          "source_image": "{{user `source_image`}}",
+          "zone": "{{user `zone`}}",
+	  "ssh_username": "appuser",
+	  "tags":"{{user `lan_tags`}}"
+	  }
+ ],
+  "provisioners": [ 
+         {
+	 "type":"shell",
+	 "script": "files/install_ruby.sh"
+         },
+	 {
+	 "type":"shell",
+	 "script": "files/install_mongodb.sh",
+	 "execute_command": "sudo {{.Path}}"
+         } 
+  ]
+}
+
